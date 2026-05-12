@@ -8,18 +8,42 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Personal', link: '/personal/' },
+      { text: 'Topsfuture', link: '/topsfuture/' },
+      { text: 'Debug', link: '/debug/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/personal/': [
+        {
+          text: 'Personal',
+          items: [
+            { text: 'Personal 首页', link: '/personal/' }
+          ]
+        }
+      ],
+      '/topsfuture/': [
+        {
+          text: 'Topsfuture',
+          items: [
+            { text: 'Topsfuture 首页', link: '/topsfuture/' },
+            { text: 'rpi-imager / tps-imager 构建指南', link: '/topsfuture/rpi-imager-build-guide' },
+            { text: 'Git 提交与 MR 流程', link: '/topsfuture/Git-MergeRequest' }
+          ]
+        }
+      ],
+      '/debug/': [
+        {
+          text: 'Debug',
+          items: [
+            { text: 'Debug 首页', link: '/debug/' },
+            { text: '博客操作手册', link: '/debug/blog-manual' },
+            { text: 'Markdown Examples', link: '/debug/markdown-examples' },
+            { text: 'Runtime API Examples', link: '/debug/api-examples' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
